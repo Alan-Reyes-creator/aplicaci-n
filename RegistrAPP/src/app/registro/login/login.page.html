@@ -1,0 +1,38 @@
+<ion-content class="auth-form">
+  <div>
+    <ion-img src="../../../assets/logoduoc.png"> </ion-img> 
+  </div>
+
+  <ion-list>
+    <ion-item>
+      <ion-input label="Correo Electronico" labelPlacement="floating" type="email" required #email></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Contraseña" labelPlacement="floating" type="password" required #password></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <div class="centrar">
+    <ion-button type="submit" fill="clear" size="large" color="primary" (click)="logIn(email, password)">Acceder</ion-button> <!-- Función coherente -->
+  </div>
+
+  <br>
+
+  <ion-button type="submit" color="light" (click)="logInProfesor(email, password)" expand="block" fill="clear">Acceso Profesor</ion-button>
+
+  <br>
+
+  <ion-button type="submit" color="light"  (click)="authService.GoogleAuth()" expand="block" fill="clear">
+    <ion-icon name="logo-google"></ion-icon>
+    &nbsp; Iniciar sesion con Google
+  </ion-button>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  
+  <div class="centrar">
+    <ion-button color="tertiary" fill="clear" (click)="Olvido()">¿Olvidaste tu contraseña?</ion-button>
+  </div>
+  </ion-content>

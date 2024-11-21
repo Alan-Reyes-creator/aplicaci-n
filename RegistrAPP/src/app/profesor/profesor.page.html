@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>profesor</ion-title>
+    <div class="derecha">
+    <ion-button type="submit" (click)="authService.SignOut()" size="small" color="dark" ><ion-icon name="log-out-outline" size="small"></ion-icon></ion-button>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div class="centrar">
+          <h1>Bienvenido</h1>
+          <h3>{{authService.nomUsuario()}}</h3>
+        </div>
+      </ion-col>
+      <ion-col>
+        <img src="{{authService.imgUsuario()}}" alt="avatar">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-button>Generar QR</ion-button>
+</ion-content>
